@@ -1,0 +1,24 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt"
+	controllerName="InnoStreamAdmin.InnoStreamAdmin.controller.Master" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="master" title="{i18n>Actions}" backgroundDesign="List" class="sapUiStdPage">
+		<!--All Master Pane tabs are maintained here-->
+		<tnt:NavigationList id="navigationList" selectedKey="Tab_1" itemSelect="onListItemPress">
+			<tnt:NavigationListItem text="Configuration" icon="sap-icon://overview-chart" key="Dashboard"></tnt:NavigationListItem>
+			<!--<tnt:NavigationListItem text="Appointments" icon="sap-icon://account" key="Appointments"></tnt:NavigationListItem>-->
+			<!--<tnt:NavigationListItem text="Doctors" icon="sap-icon://stethoscope" key="Doctors"></tnt:NavigationListItem>-->
+			<!--<tnt:NavigationListItem text="Patient" icon="sap-icon://wounds-doc" key="Patient"></tnt:NavigationListItem>-->
+			<!--<tnt:NavigationListItem text="Subscription" icon="sap-icon://collections-insight" key="Subscription"></tnt:NavigationListItem>-->
+			<!--<tnt:NavigationListItem text="Symptoms" icon="sap-icon://electrocardiogram" key="Symptoms"></tnt:NavigationListItem>-->
+			<!--<tnt:NavigationListItem text="Medical Specialty" icon="sap-icon://clinical-order" key="Specialty"></tnt:NavigationListItem>-->
+			<!--<tnt:NavigationListItem text="Tests" icon="sap-icon://clinical-tast-tracker" key="Tests"></tnt:NavigationListItem>-->
+			<!--<tnt:NavigationListItem text="Support" icon="sap-icon://headset" key="Support"></tnt:NavigationListItem>-->
+			<!--<tnt:NavigationListItem text="Log Out" icon="sap-icon://log" key="LogOut"></tnt:NavigationListItem>-->
+		</tnt:NavigationList>
+		<footer>
+			<OverflowToolbar>
+				<Text text="{i18n>appVersion}"/>
+				<ToolbarSpacer/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

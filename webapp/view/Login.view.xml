@@ -1,0 +1,31 @@
+<mvc:View controllerName="InnoStreamAdmin.InnoStreamAdmin.controller.Login" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<Page title="{i18n>title}" titleAlignment="Center" backgroundDesign="Transparent">
+		<VBox height="100%" alignItems="Center">
+			<HBox height="100%" alignItems="Center">
+				<VBox>
+					<Label design="Bold" text="{i18n>id}" required="true"/>
+					<Input width="300px" id="idu_admin" required="true" submit="onASignin"/>
+					<Label design="Bold" text="{i18n>pass}" required="true"/>
+					<Input width="300px" id="idp_admin" type="Password" submit="onASignin"/>
+					<HBox>
+						<Button width="145px" class="sapUiTinyMarginEnd" text="Sign In" press="onASignin"/>
+						<Button width="145px" text="Reset" press="onReset"/>
+					</HBox>
+				</VBox>
+			</HBox>
+			<VBox class="whitebg" alignContent="End">
+				<HBox alignItems="Center">
+					<!--<Image height="100px" width="200px" src="https://www.doylemahon.ie/wp-content/uploads/2019/04/SecureSSL-Icon_551886214_400x153_64T.png"/>-->
+					<Image
+						src="https://lh3.googleusercontent.com/-7lfa-BiqK30/X71eDX6sOhI/AAAAAAAAMJo/tR6c0JrM2CIW2jGpAsuGF4ftGw5_OEbeQCLcBGAsYHQ/w159-h159/image.png"/>
+					<VBox class="sapUiTinyMarginEnd">
+						<Label design="Bold" text="All data in InnoStream is encrypted in transit"/>
+						<Label design="Bold" text="by default between the Client, Doctor and Admin."/>
+						<Link target="_blank" href="https://innomentor.in/privacy-policy/" text="Click to Learn more about our Privacy Policy."/>
+					</VBox>
+				</HBox>
+			</VBox>
+		</VBox>
+	</Page>
+</mvc:View>

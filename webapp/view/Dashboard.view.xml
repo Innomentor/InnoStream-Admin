@@ -1,0 +1,46 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	controllerName="InnoStreamAdmin.InnoStreamAdmin.controller.Dashboard" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Dashboard" titleAlignment="Center">
+		<!--Custom Header with Title and App Common Buttons : Expand-->
+		<customHeader>
+			<Bar>
+				<contentMiddle>
+					<Title text="Configuration"></Title>
+				</contentMiddle>
+				<contentRight>
+					<!--<core:Fragment fragmentName="Healthbridge-admin.Healthbridge-admin.fragment.headerContent" type="XML"/>-->
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<!--Form editable-->
+			<f:SimpleForm id="idSFormUserOvpEdit" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"
+				labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="1" columnsM="1"
+				singleContainerFullSize="false">
+				<f:content>
+					<core:Title text="Calendar Charges"/>
+					<Label text="For 15 Mins"/>
+					<Input editable="{=${AppConfig>/settingEdit} === true ? true : false}" id="id15minCharge"/>
+					<Label text="For 30 Mins"/>
+					<Input editable="{=${AppConfig>/settingEdit} === true ? true : false}" id="id30minCharge"/>
+					<Label text="For 1 hour"/>
+					<Input editable="{=${AppConfig>/settingEdit} === true ? true : false}" id="idhourCharge"/>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+		<!--Footer to perform Operation : Save and Reset-->
+		<footer >
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button visible="{=${AppConfig>/settingEdit} === true ? false : true}" type="Ghost" icon="sap-icon://edit" tooltip="Edit" text="Edit"
+					press="onEdit"/>
+				<Button visible="{=${AppConfig>/settingEdit} === true ? true : false}" type="Ghost" icon="sap-icon://decline" tooltip="Cancel" text="Cancel"
+					press="onCancel"/>
+				<Button visible="{=${AppConfig>/settingEdit} === true ? true : false}" type="Reject" text="{i18n>Reset}" press="onResetGlobalFields"/>
+				<Button visible="{=${AppConfig>/settingEdit} === true ? true : false}" type="Accept" text="{i18n>Submit}" press="onSaveGlobalFields">
+					<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+				</Button>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>
